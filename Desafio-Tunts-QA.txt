@@ -1,0 +1,28 @@
+
+#cenário 01 cadastro válido
+    dado que o usuário deseja se cadastrar
+    e informou "nome" com caracteres >=2 e <=50 <letras>
+    e informou "e-mail" <usuário@exemplo.etc>
+    e informou "senha" com caracteres especiais e alfanuméricos >=4 <s3nh@>
+    e repetiu a senha anterior
+    quando adicionar essas informações no formulário de cadastro
+    então o botão "cadastrar" será habilitado 
+    e ao clicar no botão um novo cadastro deve ser criado
+    e exibir uma mensagem de sucesso "Cadastro realizado com sucesso!"
+
+#cenário 02 cadastro inválido
+    dado que o usuário deseja se cadastrar
+    e informou "nome" com caracteres >=2 e <=50 <letras>
+    e informou "e-mail" <inválido>
+    quando adicionar um e-mail inválido no formulário de cadastro
+    então uma mensagem de aviso será exibida "Este e-mail é inválido"
+
+#cenário 03 e-mail já cadastrado
+    dado que o usuário deseja se cadastrar
+    e informou "nome" com caracteres >=2 e <=50 <letras>
+    e informou "e-mail" <já cadastrado na base de dados>
+    e informou "senha" com caracteres especiais e alfanuméricos >=4 <s3nh@>
+    e repetiu a senha anterior
+    quando adicionar essas informações no formulário de cadastro
+    então o botão "cadastrar" deve ser habilitado 
+    
